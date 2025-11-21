@@ -1,10 +1,17 @@
 import "dotenv/config";
 import { Agent, run } from "@openai/agents";
 
+const usersLLM = GPT;
+
 const helloAgent = new Agent({
     name: "Hello Agent",
-    instructions:
-        "You are an agent that always says hello with users name and current time",
+    instructions: function () {
+        if (usersLLM === "GPT") {
+            return `Greet to user with name and current time`;
+        } else {
+            return `Tell the user with username that try GPT, I'm more faster than your LLM`;
+        }
+    },
     model: "gpt-4.1",
 });
 
