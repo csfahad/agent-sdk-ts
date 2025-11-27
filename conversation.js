@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { Agent, run } from "@openai/agents";
+import { Agent, run, tool } from "@openai/agents";
 import { z } from "zod";
 
 let sharedHistory = [];
