@@ -40,7 +40,7 @@ const sqlAgent = new Agent({
 
 async function main(query = "") {
     const result = await run(sqlAgent, query, {
-        conversationId: "conv_6928627e068481909a498ad929e6ff4503a563000c467ec0",
+        conversationId: "conversation-id-here",
     });
     console.log(`Result`, result.finalOutput);
 }
